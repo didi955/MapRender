@@ -1,0 +1,9 @@
+name: MapRender
+version: 1.0
+main: fr.didi955.maprender.MapRender
+author: didi955
+api-version: 1.15
+description: Plugin that render & display images on maps
+commands:
+  map:
+    description: map render command
