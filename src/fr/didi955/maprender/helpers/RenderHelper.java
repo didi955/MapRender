@@ -1,7 +1,5 @@
 package fr.didi955.maprender.helpers;
 
-import java.util.Iterator;
-
 import org.bukkit.map.MapRenderer;
 import org.bukkit.map.MapView;
 

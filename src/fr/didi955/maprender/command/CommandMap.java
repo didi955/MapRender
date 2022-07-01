@@ -8,9 +8,6 @@ import org.bukkit.entity.Player;
 
 public class CommandMap implements CommandExecutor{
 
-	public CommandMap() {
-	}
-
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(label.equalsIgnoreCase("map")) {

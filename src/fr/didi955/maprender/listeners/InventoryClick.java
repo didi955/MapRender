@@ -22,21 +22,15 @@ public class InventoryClick implements Listener {
             return;
         }
 
-        if(event.getClick().equals(ClickType.LEFT)){
-            if(event.getCurrentItem().getType().equals(Material.ARROW)){
-                if(TaskRenderImage.inventoriesMaps.containsKey(player)){
-                    ArrayList<Inventory> inventories = TaskRenderImage.inventoriesMaps.get(player);
-                    int i = 0;
-                    for(Inventory inv : inventories){
-                        if(inv.equals(inventory)){
-                            if(i != inventories.size()-1){
-                                Inventory next = inventories.get(i+1);
-                                player.openInventory(next);
-                            }
-                        }
-                        i++;
-                    }
+        if(event.getClick().equals(ClickType.LEFT) && event.getCurrentItem().getType().equals(Material.ARROW) && TaskRenderImage.inventoriesMaps.containsKey(player)){
+            ArrayList<Inventory> inventories = TaskRenderImage.inventoriesMaps.get(player);
+            int i = 0;
+            for(Inventory inv : inventories){
+                if(inv.equals(inventory) && i != inventories.size()-1){
+                    Inventory next = inventories.get(i+1);
+                    player.openInventory(next);
                 }
+                i++;
             }
         }
     }

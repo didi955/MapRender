@@ -13,15 +13,11 @@ public class DataLoader {
 		final File imagesDir = MapRender.IMAGES_DIR;
 		final File imagesMapDir = MapRender.IMAGES_MAP_DIR;
 		
-		if(!imagesDir.exists()) {
-			if(!imagesDir.mkdirs()) {
-				throw new IOException("Cannot create image directory");
-			}
+		if(!imagesDir.exists() && !imagesDir.mkdirs()) {
+			throw new IOException("Cannot create image directory");
 		}
-		if(!imagesMapDir.exists()) {
-			if(!imagesMapDir.mkdirs()) {
-				throw new IOException("Cannot create images maps directory");
-			}
+		if(!imagesMapDir.exists() && !imagesDir.mkdirs()) {
+			throw new IOException("Cannot create images maps directory");
 		}
 		
 		final File[] files = imagesMapDir.listFiles();
